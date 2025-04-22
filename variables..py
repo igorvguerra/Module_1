@@ -33,3 +33,34 @@ print("Client name: %s" % full_name)
 print(f"Client's name and age: {full_name}, {age} years old")
 print("Client's name and age: {}, {} years old".format(full_name, age))
 
+
+# dicionários em python
+
+person = {"name": "Igor", "age": 35, "city": "Lisbon"}
+print(person)
+
+print("Name:", person["name"])
+person["last_name"] = "Guerra"
+
+print(person["last_name"])
+
+person["age"] = 40
+print(person)
+
+del person["last_name"]
+print(person)
+
+keys = person.keys()
+print(keys)
+
+list_of_keys = list(keys)
+print(list_of_keys[1])
+
+values = person.values()
+print(values)
+
+
+items = list(person.items())
+print(items)
+
+print("First Key-value:, %s = %s" % (items[0] [0], items[0] [1]))

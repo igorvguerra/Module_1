@@ -12,8 +12,8 @@ print("Float number = ", float_number)
 
 # type() retorna o tipo da vaiável
 
-print("Type of the vaiable number = ", type(number))
-print("Type of the vaiable real number = ", type(float_number))
+print("Type of the variable number = ", type(number))
+print("Type of the variable real number = ", type(float_number))
 
 # declarar variavel com quebra de linha usar 3 aspas duplas ou simples, melhor dupla
 
@@ -64,3 +64,18 @@ items = list(person.items())
 print(items)
 
 print("First Key-value:, %s = %s" % (items[0] [0], items[0] [1]))
+
+
+# if elif e else
+
+legal_age = 41
+if legal_age >= 18:
+    print("This person is over 18")
+elif legal_age <=12:
+    print("This person will pay kids entrance fee")
+else:
+    print("This person is not over 18")
+
+message = "You can request a drivers license" if legal_age >= 18 else "You can not request a drivers license yet"
+print(message)
+

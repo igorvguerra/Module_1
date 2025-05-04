@@ -68,7 +68,7 @@ print("First Key-value:, %s = %s" % (items[0] [0], items[0] [1]))
 
 # if elif e else
 
-legal_age = 41
+legal_age = int(input("What is your age? "))
 if legal_age >= 18:
     print("This person is over 18")
 elif legal_age <=12:
@@ -79,3 +79,27 @@ else:
 message = "You can request a drivers license" if legal_age >= 18 else "You can not request a drivers license yet"
 print(message)
 
+# for
+print("For using list")
+new_list = [1,2,3,4,5]
+for element in new_list:
+    print(element)
+
+print("For using tuple")
+my_tuple = (6,7,8,9,10)
+for element in my_tuple:
+    print(element)
+
+
+new_product = {"code": "7563", "stock": "43", "description": "New hair product"}
+print("for using a dictionary - keys")
+for key in new_product.keys():
+    print(key)
+
+print("\nfor using a dictionary - values")
+for value in new_product.values():
+    print(value)
+
+print("\nfor using a dictionary - items")
+for key, value in new_product.items():
+    print(f"{key}: {value}")

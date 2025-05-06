@@ -1,3 +1,20 @@
+# Esse é o meu primeiro comentário
+""" comentários com mais de uma linha
+    usa se três aspas duplas
+"""
+name = "Igor" + " Guerra"
+
+idade = 5
+
+if idade < 18: 
+    print("underage")
+else:
+    print("overage")
+
+
+
+
+
 full_name = "Igor Guerra"
 age = 35
 
@@ -103,3 +120,69 @@ for value in new_product.values():
 print("\nfor using a dictionary - items")
 for key, value in new_product.items():
     print(f"{key}: {value}")
+
+# range(): intervalo numérico.
+# [0,1,2,3,4,5,6,7,8,9]
+print(list(range(0,10)))
+
+for guy in range(5):
+    print("Number:", guy)
+
+print("\n Using range() with len()")
+listin = [1,2,3,4,5]
+print(listin)
+for indice in range(0, len(listin)):
+    if indice == 3:
+        listin[indice] = 5
+print(listin)
+
+#enumarate()
+
+list_enumarate = ["a", "b", "c"]
+for indice, value in enumerate(list_enumarate):
+    print(f"{indice}: {value}")
+
+#while 
+
+print("Exemple of while")
+counter = 0
+while counter < 5:
+    print("Couting:", counter)
+    counter += 1
+print("End of counting")
+
+
+#functions
+
+def salute(individual): 
+    print(f"Hello, {individual}!")
+
+print("\nExecuting function salute:")
+salute("Alice")
+salute("Bob")
+
+question = input("what is yout name?")
+salute(question)
+
+def squareroot(target):
+    result = target ** 2
+    return result
+
+result_of_squareroot = squareroot(5)
+print("\nThe squareroot of 5 is: ", result_of_squareroot)
+
+
+print(squareroot(3))
+
+def addition(number1, number2):
+    addition_result = number1 + number2
+    return addition_result
+
+number1 = 30
+number2 = 45
+
+add_result = addition(number1, number2)
+
+# print("The result of adding %s and %s is %s" % (number1, number2, addition(number1, number2)))
+print("The result of adding %s and %s is %s" % (number1, number2, add_result))
+

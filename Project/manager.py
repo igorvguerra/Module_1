@@ -1,3 +1,11 @@
+def add_task(tasks,task_name):
+    task = {"task": task_name, "completed": False}
+    tasks.append(task)
+    print(f"Task {task_name} was successfully added!")
+    return
+
+tasks = []
+
 
 while True:
     print("\n Task Manager Menu:")
@@ -9,8 +17,11 @@ while True:
     print("6. Exit")
 
     choice = input("Choose your action: ")
+    if choice == "1":
+        task_name = input("Please type the name of the task you want to add: ")
+        add_task(tasks, task_name)
 
-    if choice == "6":
+    elif choice == "6":
         break
 
 print("Software ended")

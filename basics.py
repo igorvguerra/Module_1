@@ -201,3 +201,28 @@ else:
     print(f"Result: {result_target}")
 finally:
     print("End of program")
+
+
+#modules
+
+print("Exampe of a standard module import")
+#whole library
+import math
+
+square_root = math.sqrt(25)
+print(f"The squarerot of 25 is {square_root}")
+
+#just what is needed
+
+from math import sqrt
+
+new_squareroot = sqrt(9)
+print(f"The squarerot of 9 is {new_squareroot}")
+
+from my_module import salute, double
+
+msg = salute("Igor")
+double_result = double(7)
+
+print(msg)
+print(f"The double of 7 is {double_result}")

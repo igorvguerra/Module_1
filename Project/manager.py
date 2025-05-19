@@ -21,6 +21,12 @@ def update_task_name(tasks, task_index, new_task_name):
         print("Error. Please choose a valid task number")
     return
 
+def complete_task(tasks, task_index):
+    adjusted_task_index = int(task_index) - 1
+    tasks[adjusted_task_index]["completed"] = True
+    print(f"Task {task_index} marked as completed!")
+    return
+
 tasks = []
 
 
@@ -37,13 +43,21 @@ while True:
     if choice == "1":
         task_name = input("Please type the name of the task you want to add: ")
         add_task(tasks, task_name)
+
     elif choice == "2":
         show_tasks(tasks)
+
     elif choice == "3":
         show_tasks(tasks)
         task_index = input("Please type the number of the task you want to update: ")
         new_task_name = input("Please type the new Task name: ")
         update_task_name(tasks, task_index, new_task_name)
+
+    elif choice == "4":
+        show_tasks(tasks)
+        task_index = input("Please type the number of the task you want to mark as completed: ")
+        complete_task(tasks, task_index)
+
     elif choice == "6":
         break
 

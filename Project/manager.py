@@ -27,6 +27,13 @@ def complete_task(tasks, task_index):
     print(f"Task {task_index} marked as completed!")
     return
 
+def delete_completed_tasks(tasks):
+    for task in tasks:
+        if task["completed"]:
+            tasks.remove(task)
+    print("All completed tasks were deleted.")
+    return
+
 tasks = []
 
 
@@ -36,7 +43,7 @@ while True:
     print("2. List your Tasks")
     print("3. Update a Task")
     print("4. Complete a Task")
-    print("5. Delete a Task")
+    print("5. Delete a completed Task")
     print("6. Exit")
 
     choice = input("Choose your action: ")
@@ -58,6 +65,9 @@ while True:
         task_index = input("Please type the number of the task you want to mark as completed: ")
         complete_task(tasks, task_index)
 
+    elif choice == "5":
+        delete_completed_tasks(tasks)
+        show_tasks(tasks)
     elif choice == "6":
         break
 

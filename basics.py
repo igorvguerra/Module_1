@@ -186,3 +186,18 @@ add_result = addition(number1, number2)
 # print("The result of adding %s and %s is %s" % (number1, number2, addition(number1, number2)))
 print("The result of adding %s and %s is %s" % (number1, number2, add_result))
 
+# errors
+
+print("example of exceptions")
+try:
+    target = int(input("Please type a number: "))
+    result_target = 10 / target   
+except ValueError as e:
+    print(f"Value error: {e}")
+    raise ValueError("Variables types are not compatibles")
+except Exception as e:
+    print(f"Error: {e}")
+else: 
+    print(f"Result: {result_target}")
+finally:
+    print("End of program")
